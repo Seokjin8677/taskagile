@@ -67,13 +67,17 @@ describe('RegisterPage.vue', () => {
         const emailAddress = 'sunny@local';
         const password = 'VueJsRocks!';
 
-        await wrapper.setData({
+
+        /*await wrapper.setData({
             form: {
                 username: username,
                 emailAddress: emailAddress,
                 password: password,
             },
-        });
+        });*/
+        await fieldUsername.setValue(username)
+        await fieldEmailAddress.setValue(emailAddress)
+        await fieldPassword.setValue(password)
 
         expect(fieldUsername.element.value).toEqual(username);
         expect(fieldEmailAddress.element.value).toEqual(emailAddress);
